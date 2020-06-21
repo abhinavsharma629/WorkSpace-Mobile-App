@@ -543,127 +543,6 @@ export default class SignupScreen extends Component {
           </ScrollView>
         </View>
       );
-    } else if (index === 1) {
-      return (
-        <View style={{ flex: 1, marginLeft: 20, marginTop: 15 }}>
-          <ScrollView>
-            <View style={{ marginLeft: 75 }}>
-              <View style={{ flexDirection: "row" }}>
-                <Icon name="access-point-network" size={50} />
-                <Text
-                  style={{
-                    marginTop: 15,
-                    marginLeft: 20,
-                    fontSize: 20,
-                    fontFamily: "Roboto",
-                    fontWeight: "bold"
-                  }}
-                >
-                  Social Profiles
-                </Text>
-              </View>
-              <Text />
-            </View>
-
-            <View style={{ flexDirection: "row" }}>
-              <Icon name="code-braces" size={30} style={{ marginTop: 12 }} />
-              <TextInput
-                placeholder="Codeforces Handle"
-                outlined
-                autoCapitalize="none"
-                placeholderColor="#c4c3cb"
-                style={styles.loginFormTextInput}
-                onChangeText={data => {
-                  this.setState({ codeforces: data });
-                }}
-              />
-            </View>
-
-            <View style={{ flexDirection: "row" }}>
-              <Icon
-                name="code-greater-than-or-equal"
-                size={30}
-                style={{ marginTop: 12 }}
-              />
-              <TextInput
-                placeholder="Hackerrank Handle"
-                outlined
-                placeholderColor="#c4c3cb"
-                style={styles.loginFormTextInput}
-                onChangeText={data => {
-                  this.setState({ hackerrank: data });
-                }}
-              />
-            </View>
-
-            <View style={{ flexDirection: "row" }}>
-              <Icon name="code-tags" size={30} style={{ marginTop: 12 }} />
-              <TextInput
-                placeholder="Hackerearth Handle"
-                outlined
-                placeholderColor="#c4c3cb"
-                style={styles.loginFormTextInput}
-                onChangeText={data => {
-                  this.setState({ hackerearth: data });
-                }}
-              />
-            </View>
-            <View style={{ flexDirection: "row" }}>
-              <Icon name="code-brackets" size={30} style={{ marginTop: 12 }} />
-              <TextInput
-                placeholder="Spoj Handle"
-                outlined
-                placeholderColor="#c4c3cb"
-                style={styles.loginFormTextInput}
-                onChangeText={data => {
-                  this.setState({ spoj: data });
-                }}
-              />
-            </View>
-            <View style={{ flexDirection: "row" }}>
-              <Icon name="code-not-equal" size={30} style={{ marginTop: 12 }} />
-              <TextInput
-                placeholder="Codechef Handle"
-                outlined
-                placeholderColor="#c4c3cb"
-                style={styles.loginFormTextInput}
-                onChangeText={data => {
-                  this.setState({ codechef: data });
-                }}
-              />
-            </View>
-
-            <View style={{ flexDirection: "row" }}>
-              <Icon name="github-circle" size={30} style={{ marginTop: 12 }} />
-              <TextInput
-                placeholder="Github Handle"
-                outlined
-                placeholderColor="#c4c3cb"
-                style={styles.loginFormTextInput}
-                onChangeText={data => {
-                  this.setState({ github: data });
-                }}
-              />
-            </View>
-
-            <View style={{ flexDirection: "row" }}>
-              <Icon name="twitter" size={30} style={{ marginTop: 12 }} />
-              <TextInput
-                placeholder="Twitter Handle"
-                outlined
-                placeholderColor="#c4c3cb"
-                style={styles.loginFormTextInput}
-                onChangeText={data => {
-                  this.setState({ twitter: data });
-                }}
-              />
-            </View>
-
-            <Text />
-            <Text />
-          </ScrollView>
-        </View>
-      );
     } else {
       return (
         <View style={{ flex: 1, marginLeft: 20, marginTop: 15 }}>
@@ -858,13 +737,6 @@ export default class SignupScreen extends Component {
           data.append("dob", s.dob);
           data.append("gender", s.gender);
           data.append("image", s.image);
-          data.append("hackerrank", s.hackerrank);
-          data.append("hackerearth", s.hackerearth);
-          data.append("codechef", s.codechef);
-          data.append("codeforces", s.codeforces);
-          data.append("spoj", s.spoj);
-          data.append("github", s.github);
-          data.append("twitter", s.twitter);
           data.append("lat", s.lat);
           data.append("long", s.long);
           data.append("lmark", s.lmark);
@@ -1082,10 +954,6 @@ export default class SignupScreen extends Component {
               {
                 index: 1,
                 data: "2"
-              },
-              {
-                index: 2,
-                data: "3"
               }
             ]}
             renderItem={this._renderItem}
