@@ -174,7 +174,7 @@ export default class BeforeGDLoginScreen extends Component {
     this.setState({ ended: true });
   };
 
-  gdMakeLogic = async () => {
+  gdMakeLogic = () => {
     fetch("https://shielded-dusk-55059.herokuapp.com/hi/gd_data_overview", {
       method: "GET",
       headers: {

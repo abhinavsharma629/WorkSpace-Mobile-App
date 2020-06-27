@@ -164,7 +164,7 @@ export default class BeforeDBLoginScreen extends Component {
     this.setState({ ended: true });
   };
 
-  dbMakeLogic = async () => {
+  dbMakeLogic = () => {
     fetch("https://shielded-dusk-55059.herokuapp.com/hi/db_data_overview", {
       method: "GET",
       headers: {
